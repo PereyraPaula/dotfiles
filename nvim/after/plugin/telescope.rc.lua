@@ -42,28 +42,38 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
+-- Buscar archivos dentro de una carpeta
+vim.keymap.set('n', 'ff', 
   function()
     builtin.find_files({
       no_ignore = false,
       hidden = true
     })
   end)
-vim.keymap.set('n', ';r', function()
+
+-- Busque una cadena en su directorio de trabajo actual y obtenga resultados en vivo 
+vim.keymap.set('n', 'gw', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '\\\\', function()
-  builtin.buffers()
-end)
-vim.keymap.set('n', ';t', function()
+
+-- vim.keymap.set('n', '|||', function()
+--  builtin.buffers()
+-- end)
+
+-- Enumera las etiquetas de ayuda disponibles y abre una nueva ventana con la información 
+vim.keymap.set('n', 'ht', function()
   builtin.help_tags()
 end)
+
 vim.keymap.set('n', ';;', function()
   builtin.resume()
 end)
+
 vim.keymap.set('n', ';e', function()
   builtin.diagnostics()
 end)
+
+-- Busca un archivo. Usar despues de crear una nueva tab
 vim.keymap.set("n", "sf", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",

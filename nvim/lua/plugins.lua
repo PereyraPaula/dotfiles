@@ -38,4 +38,5 @@ packer.startup(function(use)
   use "akinsho/nvim-bufferline.lua"
   use "glepnir/lspsaga.nvim"
   use "lewis6991/gitsigns.nvim"
+  use "mattn/emmet-vim"
 end)

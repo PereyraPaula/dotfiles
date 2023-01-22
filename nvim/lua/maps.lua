@@ -17,6 +17,9 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Nueva pestaña
 keymap.set('n', 'te', ':tabedit')
+keymap.set('n', 'tl', ':tabprevious') -- Pasa a la tab de la izquierda
+keymap.set('n', 'tr', ':tabNext') -- Pasa al tab de la derecha
+
 -- Dividir ventana
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
