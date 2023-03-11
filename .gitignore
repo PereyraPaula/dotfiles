@@ -2,4 +2,5 @@
 
 !.gitignore
 !nvim/
+!powershell/
 !README.md
